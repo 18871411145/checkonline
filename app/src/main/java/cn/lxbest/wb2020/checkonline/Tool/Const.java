@@ -26,10 +26,7 @@ public class Const {
          * 开发环境+服务器ok
          */
         public static final int DEV_OK = 2;
-        /**
-         * 生产环境
-         */
-        public static final int PROD = 3;
+
 
     }
 
@@ -60,18 +57,6 @@ public class Const {
     }
 
 
-    //考勤相关字段
-    public static class Field_Table_KaoQin{
-
-        public static String sfqd="sfqd";//是否签到
-        public static String qdsj="qdsj";//签到时间
-
-        public static String month ="month";//考勤月份
-        public static String days ="days";//当月出勤天数
-
-        public static String cqts="cqts";//当月出勤天数
-        public static String qqts="qqts";//当月缺勤天数
-    }
 
     //用户字段
     public static class Field_Table_User{
