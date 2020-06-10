@@ -2,11 +2,13 @@ package cn.lxbest.wb2020.checkonline.Modle;
 
 import org.json.JSONObject;
 
+import java.util.Comparator;
+
 import cn.lxbest.wb2020.checkonline.Tool.Const;
 import cn.lxbest.wb2020.checkonline.Tool.Funcs;
 
 /**新闻信息容器*/
-public class LiuYan {
+public class LiuYan implements Comparable<LiuYan> {
     public int id;//新闻id
     public String phone;//留言电话
     public String content;//留言内容
@@ -21,5 +23,11 @@ public class LiuYan {
             e.printStackTrace();
         }
 
+    }
+
+
+    @Override
+    public int compareTo(LiuYan o) {
+        return o.id-this.id;
     }
 }

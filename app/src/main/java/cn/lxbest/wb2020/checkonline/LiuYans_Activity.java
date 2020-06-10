@@ -24,6 +24,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import cn.lxbest.wb2020.checkonline.Modle.LiuYan;
@@ -106,6 +107,7 @@ public class LiuYans_Activity extends AppCompatActivity implements OnRefreshList
                     JSONObject js=data.getJSONObject(i);
                     list.add(new LiuYan(js));
                 }
+                Collections.sort(list);
                 listView.setAdapter(adapter);
             }else{
                 Funcs.showtoast(LiuYans_Activity.this,"返回错误代码");
