@@ -39,10 +39,6 @@ public class Const {
         public static String Code = "code";
         public static String Data = "data";
 
-
-        public static String data1 ="data1";//标题和饼图数据
-        public static String data2 ="data2";//签到详情列表数据
-        public static String data3 ="data3";//签到详情列表数据
     }
     /**请求url*/
     public static class Key_Resp_Path{
