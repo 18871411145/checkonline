@@ -1,0 +1,2 @@
+rootProject.name='checkonline'
+include ':app'

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.lxbest.wb2020.checkonline"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="29" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="cn.lxbest.wb2020.checkonline.App"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="cn.lxbest.wb2020.checkonline.SplashActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.lxbest.wb2020.checkonline.Login_activity" />
+        <activity android:name="cn.lxbest.wb2020.checkonline.WiFi_Activity" />
+        <activity android:name="cn.lxbest.wb2020.checkonline.Add_User_Activity" />
+        <activity android:name="cn.lxbest.wb2020.checkonline.Add_News_Activity" />
+        <activity android:name="cn.lxbest.wb2020.checkonline.News_Activity" />
+        <activity android:name="cn.lxbest.wb2020.checkonline.NewsXQ_Activity" />
+        <activity android:name="cn.lxbest.wb2020.checkonline.Web_Abouts_Activity" />
+        <activity android:name="cn.lxbest.wb2020.checkonline.LiuYans_Activity" />
+        <activity android:name="cn.lxbest.wb2020.checkonline.LiuYanXQ_Activity" />
+        <activity android:name="cn.lxbest.wb2020.checkonline.Home_Activity" />
+    </application>
+
+</manifest>

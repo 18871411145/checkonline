@@ -1,0 +1,4 @@
+#Wed Jun 10 17:13:34 CST 2020
+base.0=D\:\\App\\checkonline_Admin\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
