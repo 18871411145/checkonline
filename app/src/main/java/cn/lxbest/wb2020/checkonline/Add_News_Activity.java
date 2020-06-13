@@ -81,7 +81,9 @@ public class Add_News_Activity extends AppCompatActivity implements View.OnClick
         if(xid!=0){
             et_xtitle.setText(intent.getStringExtra("xtitle"));
             et_xcontent.setText(intent.getStringExtra("xcontent"));
-            Picasso.with(this).load(Funcs.qnUrl(intent.getStringExtra("qnid"))).into(image2);
+            String qnid=intent.getStringExtra("qnid");
+            qnids.put("image"+index,qnid);
+            Picasso.with(this).load(Funcs.qnUrl(qnid)).into(image2);
         }
     }
 
