@@ -75,10 +75,10 @@ public class Const {
 
     //role
     public static class Role{
-        public static int Admin=990;//管理员
+        public static int Admin=990;//公司领导
         public static int member=980;//普通员工
 
-        public static String Admin_value="管理员";
+        public static String Admin_value="公司领导";
         public static String member_value="普通员工";
 
         public static List<String> roles = new ArrayList<String>() {{
