@@ -68,13 +68,17 @@ public class LiuYans_Activity extends AppCompatActivity implements OnRefreshList
             }
         });
 
-        getData();
+        getData(false);
     }
 
+    int have=0;//显示留言数量
     //获取新闻信息
-    private void getData(){
+    private void getData(boolean more){
         list=new ArrayList<>();
         String url= Funcs.servUrl(Const.Key_Resp_Path.lianxiwm);
+        if(more){
+            url=Funcs.servUrlWQ(Const.Key_Resp_Path.lianxiwm,"m="+have);
+        }
 
         App.http.get(url, new AsyncHttpResponseHandler() {
             @Override
@@ -107,6 +111,7 @@ public class LiuYans_Activity extends AppCompatActivity implements OnRefreshList
                     JSONObject js=data.getJSONObject(i);
                     list.add(new LiuYan(js));
                 }
+                have=list.size();
                 Collections.sort(list);
                 listView.setAdapter(adapter);
             }else{
@@ -122,12 +127,12 @@ public class LiuYans_Activity extends AppCompatActivity implements OnRefreshList
 
     @Override
     public void onRefresh(@NonNull RefreshLayout refreshLayout) {
-        getData();
+        getData(false);
     }
 
     @Override
     public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
-        getData();
+        getData(true);
     }
 
     class Container{

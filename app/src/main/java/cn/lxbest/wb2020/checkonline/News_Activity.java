@@ -65,13 +65,20 @@ public class News_Activity extends AppCompatActivity implements OnRefreshListene
             }
         });
 
-        getData();
+        getData(false);
     }
 
+    int have=0;//有多少新闻展示
     //获取新闻信息
-    private void getData(){
+    private void getData(boolean more){
         list=new ArrayList<>();
-        String url= Funcs.servUrl(Const.Key_Resp_Path.news);
+        String url=null;
+        if(more){
+            url= Funcs.servUrlWQ(Const.Key_Resp_Path.news,"m="+have);
+        }else{
+            url= Funcs.servUrl(Const.Key_Resp_Path.news);
+        }
+
 
         App.http.get(url, new AsyncHttpResponseHandler() {
             @Override
@@ -104,6 +111,7 @@ public class News_Activity extends AppCompatActivity implements OnRefreshListene
                     JSONObject js=data.getJSONObject(i);
                     list.add(new News(js));
                 }
+                have=list.size();
                 Collections.sort(list);
                 listView.setAdapter(adapter);
             }else{
@@ -119,12 +127,12 @@ public class News_Activity extends AppCompatActivity implements OnRefreshListene
 
     @Override
     public void onRefresh(@NonNull RefreshLayout refreshLayout) {
-        getData();
+        getData(false);
     }
 
     @Override
     public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
-        refreshLayout.finishLoadMore();
+        getData(true);
     }
 
     class Container{
