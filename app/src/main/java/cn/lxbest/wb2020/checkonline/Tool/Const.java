@@ -7,7 +7,7 @@ import java.util.List;
 public class Const {
 
     public static final String domain = "cn.lxbest.wb2020.checkonline";
-    public static final String server = "http://39.100.102.110:8080/checkonline_service";
+    public static final String server = "http://39.100.102.110/checkonline_service";
     public static final String qnserver = "http://qnyeyimg.lxbest.cn";
     public static final String contentType="application/json";
 
@@ -75,7 +75,8 @@ public class Const {
 
     //role
     public static class Role{
-        public static int Admin=990;//公司领导
+
+        public static int Admin=990;//公司管理
         public static int member=980;//普通员工
 
         public static String Admin_value="公司领导";

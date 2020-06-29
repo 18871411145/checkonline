@@ -62,7 +62,7 @@ public class App extends Application {
     }
 
     //清除preference
-    public static void cleanUserPref() {
+    public static void cleanUserPref(){
         sharedPreferences(Const.Key_SharedPref.Account).edit().clear().commit();
     }
 
